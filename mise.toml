@@ -1,0 +1,15 @@
+[tools]
+rust = { version = "1.99", components = "llvm-tools-preview" }
+"cargo:cargo-llvm-cov" = "latest"
+
+[tasks.build]
+description = "Build the node-version-keeper executable"
+run = "cargo build --release"
+
+[tasks.test]
+description = "Run the tests"
+run = "cargo test"
+
+[tasks.cover]
+description = "Measure line coverage and fail if it is below 100%"
+run = "cargo llvm-cov --fail-under-lines 100"

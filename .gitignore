@@ -1,0 +1,25 @@
+# Build output
+/target
+
+# Coverage (cargo llvm-cov)
+/coverage
+/lcov.info
+*.profraw
+*.profdata
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Claude Code local settings
+.claude/settings.local.json
+CLAUDE.local.md
+
+# Editors
+.idea/
+.vscode/
+*.swp
+
+# macOS
+.DS_Store
